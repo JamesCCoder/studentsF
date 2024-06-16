@@ -30,24 +30,24 @@ const StudentShow:React.FC = () =>{
     return (
     <div className="StudentShow_wrapper">
         <table className="student-table">
-            <thead className="student-table-head">
-                <tr>
+            <thead>
+                <tr className="student-table-head">
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email</th>
                     <th>Action</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className="student-table-body">
                 {students.map((student) => (
                 <tr key={student.id}>
                     <td>{student.firstName}</td>
                     <td>{student.lastName}</td>
                     <td>{student.email}</td>
-                    <td>
-                    <button onClick={() => handleDetail(student.id)}>Detail</button>
-                    <button onClick={() => handleEdit(student.id)}>Edit</button>
-                    <button onClick={() => handleDelete(student.id)}>Delete</button>
+                    <td className="student-table-buttons">
+                        <button className="student-table-button-detail" onClick={() => handleDetail(student.id)}>Detail</button>
+                        <button className="student-table-button-edit"  onClick={() => handleEdit(student.id)}>Edit</button>
+                        <button className="student-table-button-delete"  onClick={() => handleDelete(student.id)}>Delete</button>
                     </td>
                 </tr>
                 ))}
