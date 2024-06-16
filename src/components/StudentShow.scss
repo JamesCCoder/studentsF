@@ -4,9 +4,11 @@
     justify-content: center;
     height:calc(100vh - 7.5rem);
     background-color: rgb(240, 241, 243);
+
     .student-table{
         border-collapse: collapse;
-         
+        margin-top: 5rem;
+        overflow-y: scroll;
         .student-table-head{
             background-color: rgb(72, 79, 85);
             color:white;

@@ -11,9 +11,9 @@ const HomePage:React.FC = () =>{
     return (
         <>
             <Header />
-            <StudentShow />
+            {/* <StudentShow /> */}
             <StudentEdit />
-            <StudentDetail />
+            {/* <StudentDetail /> */}
             <Footer />
         </>
     )

@@ -1,0 +1,101 @@
+.StudentDetail_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:calc(100vh - 7.5rem);
+    background-color: rgb(240, 241, 243);
+    .StudentDetail_form{
+        overflow-y: auto;
+        width:50%;
+        height: calc(100% - 10rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        .StudentDetail_title{
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgb(72, 79, 85);
+            color:white;
+            width:100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:5rem;
+        }
+        .StudentDetail_info{
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            height:calc(100% - 8rem);
+            .StudentDetail_row{
+                display: flex;
+                flex-direction: row;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                .StudentDetail_column{
+                    width:100%;
+                    padding:1.2rem 1rem;
+                    overflow-wrap: break-word;
+                    word-break: break-all; 
+                }
+            }
+        }
+        .StudentDetail_buttons{
+            width:100%;
+            height:3rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .StudentDetail_buttons_edit{
+                 width:7rem;
+                 height: 1.8rem;
+                 margin-right: 4rem;
+                 background-color: royalblue;
+                 border:none;
+                 color:white;
+                 border-radius: 3px;
+                 @media (max-width: 1000px){
+                    margin-right: 3rem;
+                }
+                @media (max-width: 780px){
+                    margin-right: 1rem;
+                }
+                @media (max-width: 700px){
+                    margin-right: 0.5rem;
+                } 
+                &:hover{
+                     border:1px solid royalblue;
+                     background-color: white;
+                     color:royalblue;
+                 }
+            }
+            .StudentDetail_buttons_back{
+                 width:7rem;
+                 height: 1.8rem;
+                 margin-left: 4rem;
+                 background-color: red;
+                 border:none;
+                 color:white;
+                 border-radius: 3px;
+                 @media (max-width: 1000px){
+                    margin-left: 3rem;
+                }
+                @media (max-width: 780px){
+                    margin-left: 1rem;
+                }
+                @media (max-width: 700px){
+                    margin-left: 0.5rem;
+                }
+                 &:hover{
+                     border:1px solid red;
+                     background-color: white;
+                     color:red;
+                 }
+            }
+        }
+    }
+
+}
+
+
