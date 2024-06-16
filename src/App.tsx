@@ -1,26 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
-function App() {
+import { BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+
+import { useLocation } from 'react-router';
+
+import HomePage from "./pages/HomePage";
+import StudentEditPage from "./pages/StudentEditPage";
+import StudentShowPage from "./pages/StudentShowPage";
+import StudentAddPage from "./pages/StudentAddPage";
+
+const App = () => {
+  const location = useLocation();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <TransitionGroup>
+        <CSSTransition
+          key={location.key}
+          timeout={1000}
+          classNames="fade"
         >
-          Learn React
-        </a>
-      </header>
+          <Routes location={location}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="/students/add" element={<StudentAddPage />} />
+            <Route path="/students" element={<StudentShowPage />} />
+            <Route path="/students/:id/edit" element={<StudentEditPage />} />
+          </Routes>
+        </CSSTransition>
+      </TransitionGroup>
     </div>
   );
-}
+};
 
-export default App;
+const AppWithRouter = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default AppWithRouter;

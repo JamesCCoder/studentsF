@@ -1,18 +1,16 @@
 import React from "react";
-import "./StudentEditPage.scss";
+import "./StudentAddPage.scss";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import StudentEdit from "../components/StudentEdit";
 
-const StudentEditPage = () =>{
+const StudentAddPage = () =>{
     return (
-        <>
+         <>
             <Header />
-            <StudentEdit />
             <Footer />
         </>
     )
 }
 
-export default StudentEditPage;
+export default StudentAddPage;
