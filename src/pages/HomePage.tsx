@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import StudentShow from "../components/StudentShow";
 import "./HomePage.scss";
 
-const HomePage = () =>{
+const HomePage:React.FC = () =>{
     return (
         <>
             <Header />

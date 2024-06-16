@@ -1,0 +1,17 @@
+.StudentShow_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:calc(100vh - 7.5rem);
+    background-color: rgb(239,242,255);
+    .student-table{
+        .student-table-head{
+            background-color: rgb(40,43,48);
+            color:white;
+            font-family: 'Courier New', Courier, monospace;
+            th{
+                padding:0.7rem 1rem;
+            }
+        }
+    }
+}

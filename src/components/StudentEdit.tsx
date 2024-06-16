@@ -1,7 +1,7 @@
 import React from "react";
 import "./StudentEdit.scss";
 
-const StudentEdit = () =>{
+const StudentEdit:React.FC = () =>{
     return (
         <div></div>
     )

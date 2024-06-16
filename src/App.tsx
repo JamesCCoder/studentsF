@@ -11,7 +11,7 @@ import StudentEditPage from "./pages/StudentEditPage";
 import StudentShowPage from "./pages/StudentShowPage";
 import StudentAddPage from "./pages/StudentAddPage";
 
-const App = () => {
+const App:React.FC = () => {
   const location = useLocation();
 
   return (
