@@ -34,45 +34,54 @@ const StudentEdit:React.FC = () =>{
 
     return (
         <div className="StudentEdit_wrapper">
-             <h2>Add New Student</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="firstname">First Name:</label>
-          <input
-            type="text"
-            id="firstname"
-            name="firstname"
-            value={student.firstname}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="lastname">Last Name:</label>
-          <input
-            type="text"
-            id="lastname"
-            name="lastname"
-            value={student.lastname}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={student.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">Add Student</button>
-        <button type="button" onClick={handleCancel} className="cancel-button">Cancel</button>
-      </form>
-      {submitted && <p className="success-message">Student added successfully!</p>}
+            <div className="StudentEdit_form">
+                <h2 className="StudentEdit_title">Add New Student</h2>
+                <form className="StudentDetail_form" onSubmit={handleSubmit}>
+                    <div className="StudentDetail_content">
+                        <div className="form-group">
+                        <label htmlFor="firstname">First Name:</label>
+                        <input
+                            type="text"
+                            id="firstname"
+                            name="firstname"
+                            value={student.firstname}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="lastname">Last Name:</label>
+                        <input
+                            type="text"
+                            id="lastname"
+                            name="lastname"
+                            value={student.lastname}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email">Email:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={student.email}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                    </div>
+                    
+                    <div className="StudentEdit_buttons">
+                        <button className="StudentDetail_buttons_add" type="submit">Add Student</button>
+                        <button className="StudentDetail_buttons_cancel" type="button" onClick={handleCancel}>Cancel</button>
+                    </div>
+
+                </form>
+                {submitted && <p className="success-message">Student added successfully!</p>}     
+                </div>
+             
         </div>
     )
 }
