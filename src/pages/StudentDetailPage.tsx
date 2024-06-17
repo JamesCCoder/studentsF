@@ -1,20 +1,18 @@
 import React from "react";
+import "./StudentEditPage.scss";
+
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import StudentDetail from "../components/StudentDetail";
-import StudentEdit from "../components/StudentEdit";
-import StudentShow from "../components/StudentShow";
-import "./HomePage.scss";
 
-
-const HomePage:React.FC = () =>{
+const StudentDetailPage:React.FC = () =>{
     return (
         <>
             <Header />
-            <StudentShow />
+            <StudentDetail />
             <Footer />
         </>
     )
 }
 
-export default HomePage;
+export default StudentDetailPage;

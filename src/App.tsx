@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 import StudentEditPage from "./pages/StudentEditPage";
 import StudentShowPage from "./pages/StudentShowPage";
 import StudentAddPage from "./pages/StudentAddPage";
+import StudentDetailPage from "./pages/StudentDetailPage";
 
 const App:React.FC = () => {
   const location = useLocation();
@@ -28,6 +29,7 @@ const App:React.FC = () => {
             <Route path="*" element={<Navigate to="/" />} />
             <Route path="/students/add" element={<StudentAddPage />} />
             <Route path="/students" element={<StudentShowPage />} />
+            <Route path="/students/:id" element={<StudentDetailPage />} />
             <Route path="/students/:id/edit" element={<StudentEditPage />} />
           </Routes>
         </CSSTransition>

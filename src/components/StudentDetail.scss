@@ -48,11 +48,15 @@
             align-items: center;
             justify-content: center;
             .StudentDetail_buttons_edit{
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                  width:7rem;
                  height: 1.8rem;
                  margin-right: 4rem;
                  background-color: royalblue;
-                 border:none;
+                 border:1px solid royalblue;
                  color:white;
                  border-radius: 3px;
                  @media (max-width: 1000px){
@@ -71,11 +75,15 @@
                  }
             }
             .StudentDetail_buttons_back{
+                 text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                  width:7rem;
                  height: 1.8rem;
                  margin-left: 4rem;
                  background-color: red;
-                 border:none;
+                 border:1px solid red;
                  color:white;
                  border-radius: 3px;
                  @media (max-width: 1000px){
